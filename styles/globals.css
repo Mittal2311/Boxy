@@ -32,7 +32,7 @@ h1,h2,h3,h4,h5,h6,p{
 }
 .logo a {
   font-family: Inter;
-  font-style: normal;
+  font-style: bold;
   font-weight: 200;
   font-size: 28px;
   line-height: 34px;
@@ -124,7 +124,8 @@ img {
   font-size: 20px;
   line-height: 24px;
   display: flex;
-  align-items: center;
+  align-items: end;
+
 }
 .banner_content .ourlink:after {
   content: '';
@@ -132,33 +133,54 @@ img {
   background-image: url('/vector 1.png');
   width: 20px;
   height: 20px;
+  background-repeat: no-repeat;
+  margin-left: 8px;
 }
-
+.banner_img {
+  display: inline-block;
+  background-image: url('/bannerimg2.png');
+  background-repeat: no-repeat;
+  width: 376px;
+  height: 263px;
+}
 /* Banner Section css end  */
 
 /* responsive css start  */
 @media only screen and (max-width: 992px) {
-  .menu{text-align: center;}
   .menu a{padding: 0 10px; font-size: 16px;}
+
 }
-@media only screen and (max-width: 610px) {
+@media only screen and (max-width: 629px) {
   .menu a{font-size: 14px;}
 }
+
 @media only screen and (max-width: 567px) {
-  .logo a{line-height: 32px;}
-  .main{padding: 22px 29px;}
-  .headers nav.navbar { display: none;font-size: 20px; line-height: 100%;}
-  .mobile_menu .btnicon{display: block;}
-  .mobile_menu nav.navbar{display: block; background-color: white; height: auto; width: 200px; padding: 20px 0px; height: 200px;} 
+  .logo a{line-height: 32px;width: 154px; height: 47px;}
+  .headers{display: table; margin: 0 auto;}
+  .main{padding: 23px 20px;}
+  .headers nav.navbar{display: none;font-size: 20px; line-height: 100%;}
+  .mobile_menu .btnicon{display: contents;}
+  .mobile_menu nav.navbar{display: block; background-color: white; height: auto; width: 200px; padding: 20px 0px; height: 900px; transition: left 0.4s linear;} 
   .mobile_menu nav.navbar a { display: block; width: 100%; padding: 10px 10px;}
-  .mobile_nav{position: absolute;top: 7%; left: 0; right: auto;bottom: auto;}
-  .menu{position: absolute; top: 0;left: auto; right:0; width: 40%;}
+  .mobile_nav{position: absolute;top: 0px; left: 0; right: auto;bottom: auto;}
+  .menu{position: absolute; top: 0;left: auto; right:0; width: 40%; padding: 40px 0px;}
   .mobile_menu{display: inline-block;}
   .get{font-size: 20px !important;}
+  .btnicon .open{margin-bottom: 4px;}
+  .close {
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+}
+}
+@media only screen and (max-width: 420px) {
+  .logo a{height: 35px;}
+  .menu{padding: 33px 0px;}
 }
 @media only screen and (max-width: 330px) {
-  .main{padding: 22px 10px;}
+  /* .main{padding: 22px 10px;} */
   .get{font-size: 15px !important;}
+  .mobile_menu nav.navbar{width: 180px;}
+  .menu{padding: 31px 0px;}
 }
-
 /* responsive css end  */

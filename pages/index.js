@@ -4,10 +4,10 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Header from "./header";
+import Banner from "./Banner";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       {/* <h1> My First sapp</h1> */}
@@ -21,6 +21,7 @@ export default function Home() {
             >
               {!isOpen ? (
                 <svg
+                className="open"
                   width="24"
                   height="19"
                   viewBox="0 0 24 19"
@@ -31,9 +32,18 @@ export default function Home() {
                   <rect y="8" width="24" height="3" fill="#111111" />
                   <rect y="16" width="24" height="3" fill="#111111" />
                 </svg>
-              ) : (
+              ) : ( 
+                  <div></div>
+             
+              )}
+            </button>
+            {/* <Header />  */}
+            {isOpen ? (
+              <div className="mobile_nav">
+                <nav className="navbar">
+                <div onClick={()=>{setIsOpen(false)}}>
                 <svg
-                  className="block h-6 w-6"
+                  className="close block h-6 w-6"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -49,13 +59,7 @@ export default function Home() {
                     d="M6 18L18 6M6 6l12 12"
                   />
                 </svg>
-              )}
-            </button>
-            {/* <Header />  */}
-
-            {isOpen ? (
-              <div className="mobile_nav">
-                <nav className="navbar">
+                </div>
                   <Link href="/">
                     <a>Work</a>
                   </Link>
@@ -68,8 +72,11 @@ export default function Home() {
                 </nav>
               </div>
             ) : (
-              <div></div>
+              <div>
+              
+              </div>
             )}
+
           </div>
           <div className="logo">
             <Link href="/">
@@ -85,24 +92,11 @@ export default function Home() {
         </div>
         </div>
         {/*                                            Banner Section start                                   */}
-        {/* <div className="banner_section">
-          <div className="container">
-          <div className="content">
-            <div className="banner_content">
-            <h1 className="title">Welcom <span>e to </span> our agency.</h1>
-              <p> We are boxy, an innovative, client-first agency. We have worked with the likes of Droplet and Blimp. </p>
-              <p>
-              Our team has over 100 years of collective experience in 3D marketing and branding. 
-              </p>
-              <a href="#" className="ourlink">Our Work</a>
-            </div>
-              
-            </div>
-          </div>
-        </div> */}
+             
+              <Banner />
 
         {/*                                            Banner Section End                                  */}
-     
+        
     </>
   );
 }
