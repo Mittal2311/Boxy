@@ -90,7 +90,7 @@ img {
   right: auto;
   bottom: auto;
 }
-.banner_content h1 {
+.title {
     font-family: Inter;
     font-style: normal;
     font-weight: 300;
@@ -125,7 +125,6 @@ img {
   line-height: 24px;
   display: flex;
   align-items: end;
-
 }
 .banner_content .ourlink:after {
   content: '';
@@ -142,18 +141,35 @@ img {
   background-repeat: no-repeat;
   width: 376px;
   height: 263px;
+  position: absolute;
+    left: auto;
+    right: 12.2%;
+    bottom: -5%;
+}
+.banner_section{
+position: relative;
 }
 /* Banner Section css end  */
+
+/* Slider Section css end  */
+.slider_content {
+  padding: 50px 0;
+  width: 100%;
+  display: inline-block;
+}
+.slider_img img{
+  width: 213.52px;
+  height: 40.7px;
+}
+/* Slider Section css end  */
 
 /* responsive css start  */
 @media only screen and (max-width: 992px) {
   .menu a{padding: 0 10px; font-size: 16px;}
-
 }
 @media only screen and (max-width: 629px) {
   .menu a{font-size: 14px;}
 }
-
 @media only screen and (max-width: 567px) {
   .logo a{line-height: 32px;width: 154px; height: 47px;}
   .headers{display: table; margin: 0 auto;}
@@ -161,21 +177,19 @@ img {
   .headers nav.navbar{display: none;font-size: 20px; line-height: 100%;}
   .mobile_menu .btnicon{display: contents;}
   .mobile_menu nav.navbar{display: block; background-color: white; height: auto; width: 200px; padding: 20px 0px; height: 900px; transition: left 0.4s linear;} 
-  .mobile_menu nav.navbar a { display: block; width: 100%; padding: 10px 10px;}
+  .mobile_menu nav.navbar a { display: block; width: 100%; margin-top: 24px;}
   .mobile_nav{position: absolute;top: 0px; left: 0; right: auto;bottom: auto;}
   .menu{position: absolute; top: 0;left: auto; right:0; width: 40%; padding: 40px 0px;}
   .mobile_menu{display: inline-block;}
   .get{font-size: 20px !important;}
   .btnicon .open{margin-bottom: 4px;}
-  .close {
-    display: inline-block;
-    float: right;
-    margin-right: 20px;
+  .close { display: inline-block; float:right;margin-right: 20px;}
 }
-}
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 420px){
   .logo a{height: 35px;}
   .menu{padding: 33px 0px;}
+  .logo img{width: 23px;}
+  .btnicon .open{height: 17px;width: 17px;}
 }
 @media only screen and (max-width: 330px) {
   /* .main{padding: 22px 10px;} */

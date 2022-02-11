@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Header from "./header";
 import Banner from "./Banner";
+import Slidercomp from "./Slidercomp";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -93,10 +94,11 @@ export default function Home() {
         </div>
         {/*                                            Banner Section start                                   */}
              
-              <Banner />
+              {/* <Banner /> */}
 
         {/*                                            Banner Section End                                  */}
         
+        <Slidercomp />
     </>
   );
 }
