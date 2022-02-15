@@ -6,13 +6,17 @@ import Link from "next/link";
 import Header from "./header";
 import Banner from "./Banner";
 import Slidercomp from "./Slidercomp";
+import Exbootstrap from "./Exbootstrap";
+import Footer from "./Footer";
+import Headermain from "./headermain";
+import Card from "./Card";
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false);
+  //const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       {/* <h1> My First sapp</h1> */}
-      <div className="main">
+      {/* <div className="main">
         <div className="container">
           <div className="mobile_menu">
             <button
@@ -38,7 +42,7 @@ export default function Home() {
              
               )}
             </button>
-            {/* <Header />  */}
+           
             {isOpen ? (
               <div className="mobile_nav">
                 <nav className="navbar">
@@ -77,7 +81,6 @@ export default function Home() {
               
               </div>
             )}
-
           </div>
           <div className="logo">
             <Link href="/">
@@ -87,11 +90,17 @@ export default function Home() {
               </a>
             </Link>
           </div>
+          
+         
           <div className="menu">
             <Header />
           </div>
         </div>
-        </div>
+        </div> */}
+
+
+        <Headermain />
+        
         {/*                                            Banner Section start                                   */}
              
               {/* <Banner /> */}
@@ -99,6 +108,10 @@ export default function Home() {
         {/*                                            Banner Section End                                  */}
         
         <Slidercomp />
+        <Card/>
+
+        <Footer />
+      
     </>
   );
 }

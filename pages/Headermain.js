@@ -1,32 +1,43 @@
-import React ,{useState} from 'react'
+import React, { useState } from "react";
 import Link from "next/link";
-export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-    return (
-          <>
-          {/* // desktop view header  */}
-
-           <div className="headers">
-           <nav className="navbar">
+const Headermain = () => {
+    const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div className="header_section">
+      <div className="container">
+        <div className="row">
+          <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 btn-warning logo">
             <Link href="/">
-              <a>Work</a>
+              <a>
+                <img src="/logo.svg" />
+                boxy
+              </a>
             </Link>
-            <Link href="/About">
-              <a>About</a>
-            </Link>
-            <Link href="/Contact">
-              <a>Contact</a>
-            </Link>
-            </nav>
-            <div className="getaquote">
+          </div>
+          <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 btn-primary  header_right">
+            <nav className="navbar">
+            <div className="header">
+            <Link href="/">
+                <a>Work</a>
+              </Link>
+              <Link href="/About">
+                <a>About</a>
+              </Link>
+              <Link href="/Contact">
+                <a>Contact</a>
+              </Link>
+            </div>
+              <div className="getaquote">
             <a href="#" className="get">Get a Quote</a>
             </div>
-           </div>
+            </nav>
+          </div>
 
-           {/* // Mobile view header */}
+            {/* Mobile menu  */}
 
-           <div className="mobile_menu">
+          <div className="mobile_menu">
            <button
              type="button"
              onClick={() => setIsOpen(!isOpen)}
@@ -47,7 +58,6 @@ export default function Header() {
                </svg>
              ) : ( 
                  <div></div>
-            
              )}
            </button>
            {/* <Header />  */}
@@ -86,12 +96,13 @@ export default function Header() {
              </div>
            ) : (
              <div>
-             
              </div>
            )}
-           
          </div>
-           
-           </>
-    )
-}
+
+        </div>
+      </div>
+    </div>
+  );
+};
+export default Headermain;
