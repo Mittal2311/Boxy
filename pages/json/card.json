@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "icon": "process.png",
+      "title": "Process",
+      "description":
+        "Our process has been carefully built over years to ensure quality and speed.",
+      "link": "https://www.google.com/",
+      "cardType": "card"
+    },
+    {
+      "id": 2,
+      "link": "card1.png",
+      "cardType": "image"
+    },
+    {
+      "id": 3,
+      "icon": "time.png",
+      "title": "Time",
+      "description":
+        "We never rush, but are always timely. We’re yet to miss a deadline.",
+      "link": "https://www.google.com/",
+      "linkbutton":"https://www.google.com/",
+      "cardType": "card"
+    },
+    {
+      "id": 4,
+      "link": "card3.png",
+      "cardType": "image"
+    },
+    {
+      "id": 5,
+      "icon": "innov.png",
+      "title": "Innovation",
+      "description":
+        "We are passionate about innovation. It comes first in every project we take on.",
+      "link": "https://www.facebook.com/",
+      "cardType": "card"
+    },
+    {
+      "id": 6,
+      "link": "card2.png",
+      "cardType": "image"
+    }
+  ]

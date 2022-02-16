@@ -215,7 +215,7 @@ position: relative;
   margin: 20px 0;
 }
 .card_box p {
-  width: 272px;
+  width: 77%;
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
@@ -236,22 +236,28 @@ position: relative;
   align-items: center;
 }
 .card_box {
-  background: #FFFFFF;
+  background: #ffffff;
   padding: 40px;
-  width: 400px;
-  height: 388px;
+  width: 96.3%;
+  height: 93%;
+  /* width: 400px;
+  height: 388px; */
   /* display: flex; */
   flex-direction: column;
   align-items: flex-start;
+}
+.card_box:hover {
+  box-shadow: 0 5px 15px rgb(0 0 0 / 30%);
 }
 .card_link:after{
   content: '';
   display: inline-block;
   background-image: url('/blackarrow.png');
-  width: 20px;
-  height: 20px;
+  width: 19.5px;
+  height: 17px;
   background-repeat: no-repeat;
   margin-left: 8px;
+  vertical-align: bottom;
 }
 .card {
     background-color: transparent !important;
@@ -260,6 +266,13 @@ position: relative;
     flex-direction: initial;
     display: inline-block !important;
     margin-bottom: 30px;
+}
+.card img {
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%) !important;
 }
 
 
@@ -330,22 +343,33 @@ position: relative;
 @media only screen and (max-width: 1199px) {
   .slider_img img{width: 160.52px; height: 33.7px;}
 
+
+
+  .card_box p{font-size: 17px;}
 }
 @media only screen and (max-width: 992px) {
   .menu a{padding: 0 7px; font-size: 14px;}
   .navbar a{padding: 0 5px;}
 
   .slider_img img{width: 160.52px; height: 33.7px;}
+
+  .card_box h5{font-size: 22px;}
 }
 @media only screen and (max-width: 767px) {
   .navbar a{padding: 0 7px; font-size: 13px;}
+
+  .card img{width: 114.3%;}
+  .card_box p{width: 100%;line-height: 26px;}
+  .card_box{padding: 25px;}
+  .card_link{font-size: 16px;}
+  .card_box h5{margin: 10px 0;}
+  .card_link{margin-bottom: 12px;}
 
   .slider_img img{width: 139.52px;}
   .footer_section{padding: 30px 0;}
   .footer_content{display: inline-block !important; width: 100%;}
   .footer_logo{width: 100% !important; margin-bottom: 20px;}
 }
-
 
 @media only screen and (max-width: 629px) {
   .menu a{font-size: 14px;}
@@ -371,6 +395,9 @@ position: relative;
   
   .slider_img{margin-bottom: 15px;}
   .slider_img img{display: table !important;margin: 0 auto;}
+
+  .card img{width: 100%;}
+ 
 
   .footer_content{width: 100% !important;}
   .footer_logo{width: 100% !important;}

@@ -9,7 +9,7 @@ const Slidercomp = () => {
     infinite: true,
     // speed: 500,
     slidesToShow: 5,
-    autoplay: false,
+    autoplay: 100,
     arrows: false,
     slidesToScroll: 1,
     responsive: [
